@@ -22,8 +22,8 @@
         <label for="ciudad">Ciudad :</label>
     </div>
     <div>
-        <input type="text" id="city-input">
-        <button onclick="searchWeather()" id="search-btn">Consultar</button>
+        <input type="text" id="ciudad">
+        <button onclick="consultarClima()" id="search-btn">Consultar</button>
     </div>
     <br>
     <br>
@@ -32,10 +32,10 @@
     </div>
     <div>
         <input type="text" id="ciudades" value="London, Paris, Berlin">
-        <button onclick="consultarClima()" id="search-btn">Consultar</button>
+        <button onclick="consultarClimas()" id="search-btn2">Consultar</button>
         </div>
     <div>
-        <button>Limpiar</button>
+        <button onclick="">Limpiar</button>
     </div>
     <br>
     <br>
@@ -44,16 +44,8 @@
         <thead>
             <tr>
             <th>Ciudad</th>
-            <br><br>
-            <th id="city"></th>
-            <br><br>
             <th>Temperatura</th>
-            <br><br>
-            <th id="temperature"></th>
-            <br><br>
             <th>Descripción</th>
-            <br><br>
-            <th id="description"></th>
             </tr>
         </thead>
         <tbody>

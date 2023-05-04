@@ -1,13 +1,8 @@
-const API_KEY = 'c51b101eac0d61916ab4caf887b4aaf8';
-const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${c51b101eac0d61916ab4caf887b4aaf8}`;
-
-const obtenerciudad = document.getElementById('ciudad').value;
-const ciudad = obtenerciudad.value.trim();
-
-const obtenerciudades = document.getElementById('ciudades').value;
-const ciudades = obtenerciudades.value.trim();
+const API_KEY = '7988e38cdeafad1d912e3c3ab218ad65'; 
 
 function consultarClima() {
+const ciudad = document.getElementById('ciudad').value;  
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${API_KEY}`;
   fetch(url)
   .then(response => {
     if (response.ok) {
@@ -30,8 +25,11 @@ function consultarClima() {
 }
 
 function consultarClimas() {
+
+  const ciudades = document.getElementById('ciudades').value.split(',').map(ciudad => ciudad.trim());
+
   Promise.all(ciudades.map(ciudad => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${c51b101eac0d61916ab4caf887b4aaf8}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${API_KEY}`;
     return fetch(url).then(response => {
       if (response.ok) {
         return response.json();
@@ -63,9 +61,6 @@ function limpiarTabla() {
       tabla[i].innerHTML = "";
   }
 }
-
-searchBtn.addEventListener('click', consultarClima);
-searchBtn2.addEventListener('click', consultarClimas);
 
 
 

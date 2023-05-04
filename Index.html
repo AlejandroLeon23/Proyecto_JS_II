@@ -15,6 +15,7 @@
         text-align: left;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <body>
     <h1>Consulta de Clima</h1>
@@ -22,8 +23,8 @@
         <label for="ciudad">Ciudad :</label>
     </div>
     <div>
-        <input type="text" id="ciudad">
-        <button onclick="consultarClima()" id="search-btn">Consultar</button>
+        <input type="text" id="ciudad" name="ciudad">
+        <button class="waves-effect waves-light btn-small" onclick="consultarClima()" id="search-btn">Consultar</button>
     </div>
     <br>
     <br>
@@ -32,10 +33,10 @@
     </div>
     <div>
         <input type="text" id="ciudades" value="London, Paris, Berlin">
-        <button onclick="consultarClimas()" id="search-btn2">Consultar</button>
+        <button class="waves-effect waves-light btn-small" onclick="consultarClimas()" id="search-btn2" >Consultar</button>
         </div>
     <div>
-        <button onclick="">Limpiar</button>
+        <button class="waves-effect waves-light btn-small" onclick="limpiarTabla()">Limpiar</button>
     </div>
     <br>
     <br>
@@ -53,5 +54,7 @@
         </table>
         </div>
         <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
 </body>
 </html>
